@@ -17,17 +17,17 @@ public class SPPCBarraganCA05P1 {
      */
     
     public static void main(String[] args) {
-    getWord("una cadena");
-    getNumber("un numero double");
-    getLong("un numero Long");
-    getChar("un carácter");
+    getWord("una cadena: ");
+    getNumber("un número double: ");
+    getLong("un número Long: ");
+    getChar("un carácter: ");
     }
-    static String getWord(String palabra){
+    static String getWord(String dato){
      Scanner kb= new Scanner(System.in);
         String a = "";
         boolean flag;
         do{
-            System.out.println("Introduce "+palabra);
+            System.out.println("Introduce "+dato);
             try{
                a=kb.nextLine();
                flag=true;
@@ -56,14 +56,14 @@ public class SPPCBarraganCA05P1 {
        }while(flag==false);
         return numero;
     }
-    static long getLong(String palabra){
+    static long getLong(String msg){
         Scanner kb= new Scanner(System.in);
-        long numerito = 0;
+        long numerote = 0;
         boolean flag;
         do{
-            System.out.println("Introduce "+palabra);
+            System.out.println("Introduce "+msg);
             try{
-               numerito=kb.nextLong();
+               numerote=kb.nextLong();
                flag=true;
             } catch (Exception ex) {
                flag=false;
@@ -71,14 +71,14 @@ public class SPPCBarraganCA05P1 {
                kb.nextLine();
             }
        }while(flag==false);
-        return numerito;
+        return numerote;
     }
-    static char getChar(String palabra){
+    static char getChar(String msg){
         Scanner kb= new Scanner(System.in);
         char i = 0;
         boolean flag;
         do{
-            System.out.println("Introduce "+palabra);
+            System.out.println("Introduce "+msg);
             try{
                i=kb.next().charAt(0);
                flag=true;
